@@ -1,9 +1,19 @@
 <html>
 <body>
 Welcome to Lucky Wheel
+<div id='lg'></div>
 <script>
+var x = document.getElementById("lg");
 function gl(){
-
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(sp);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function sp(){
+x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
 }
 gl();
 </script>
