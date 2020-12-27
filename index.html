@@ -5,6 +5,7 @@
 <body>
 Welcome to Lucky Wheel
 <div id='lg'></div>
+<div id='lc'></div>
 <script>
 var x = document.getElementById("lg");
 function gl(){
@@ -22,7 +23,7 @@ gl();
 $(document).ready(function(){
 // If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
 $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-    x.innerHTML += JSON.stringify(data);
+    $('#lc').html(JSON.stringify(data));
 })
 });
 </script>
