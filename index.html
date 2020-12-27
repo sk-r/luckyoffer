@@ -18,15 +18,17 @@ function gl(){
 function sp(position){
 x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
+alert("Offer expired please try after sometime.");
 }
 gl();
+/*
 $(document).ready(function(){
 alert("Offer expired please try after sometime.");
 // If your site is on Cloudflare, then you can use '/cdn-cgi/trace' instead
-/*$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
     $('#lc').html(JSON.stringify(data));
-})*/
-});
+})
+});*/
 </script>
 </body>
 </html>
