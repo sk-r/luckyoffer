@@ -6,8 +6,12 @@
 Welcome to Lucky Wheel
 <div id='lg'></div>
 <div id='lc'></div>
+<div id='w'></div>
+<div id='h'></div>
 <script>
 var x = document.getElementById("lg");
+document.getElementById("w").innerHTML=Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+document.getElementById("h").innerHTML=Math.max(document.documentElement.clientHeigth || 0, window.innerHeight || 0);
 function gl(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(sp);
